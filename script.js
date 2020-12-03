@@ -23,3 +23,15 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click',linkAction))
 
 // ============================================================
+function scrollAppear(){
+  const text = document.querySelector('.about-me');
+  const heighText = text.getBoundingClientRect().top;
+  const heighWindow = window.innerHeight/3;
+  // console.log(heighWindow);
+
+  if(heighText<heighWindow){
+    text.classList.add('textAppear');
+  }
+}
+
+  window.addEventListener('scroll',scrollAppear);
